@@ -79,9 +79,9 @@ Para fazer um post é necessário usuário e login, portanto será trabalhada a 
 
   - Projeto individual.
 
-  - Serão `X` dias de projeto.
+  - Serão `3` dias de projeto.
 
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+  - Data de entrega para avaliação final do projeto: `02/06/2021 - 14:00h`.
 
 ---
 
@@ -143,7 +143,7 @@ Para fazer um post é necessário usuário e login, portanto será trabalhada a 
   1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
   2. `git add` _(para adicionar arquivos ao stage do Git)_
   3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-  4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
+  4. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
   5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
 
 ---
