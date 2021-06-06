@@ -3,6 +3,7 @@ const loginUserController = require('./loginUserController');
 const getUsersController = require('./getUsersController');
 const getUserByIdController = require('./getUserByIdController');
 const createCategorieController = require('./createCategorieController');
+const getCategoriesController = require('./getCategoriesController');
 
 module.exports = {
   createUserController,
@@ -10,4 +11,5 @@ module.exports = {
   getUsersController,
   getUserByIdController,
   createCategorieController,
+  getCategoriesController,
 };

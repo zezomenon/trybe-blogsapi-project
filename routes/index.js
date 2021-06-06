@@ -3,6 +3,7 @@ const loginUserRoute = require('./loginUserRoute');
 const getUsersRoute = require('./getUsersRoute');
 const getUserByIdRoute = require('./getUserByIdRoute');
 const createCategorieRoute = require('./createCategorieRoute');
+const getCategoriesRoute = require('./getCategoriesRoute');
 
 module.exports = {
   createUserRoute,
@@ -10,4 +11,5 @@ module.exports = {
   getUsersRoute,
   getUserByIdRoute,
   createCategorieRoute,
+  getCategoriesRoute,
 };
