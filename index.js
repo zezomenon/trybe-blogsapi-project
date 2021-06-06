@@ -1,6 +1,7 @@
 const express = require('express');
 const {
   createUserRoute,
+  loginUserRoute,
 } = require('./routes');
 
 const app = express();
@@ -12,5 +13,6 @@ app.get('/', (request, response) => {
 });
 
 app.use('/user', createUserRoute);
+app.use('/login', loginUserRoute);
 
 app.listen(3000, () => console.log('ouvindo porta 3000!'));
