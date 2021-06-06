@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
+const { StatusCodes } = require('http-status-codes');
+const { CustomError } = require('../helpers/error');
 const { User } = require('../models');
 
 const JWT_SECRET = process.env.JWT_SECRET || '123456';
@@ -12,4 +14,23 @@ const generateToken = async (userEmail) => {
   return token;
 };
 
-module.exports = { generateToken };
+const verifyToken = (authorization) => {
+  if (!authorization) {
+    throw new CustomError({
+      message: 'Token not found',
+      status: StatusCodes.UNAUTHORIZED,
+    });
+  }
+  jwt.verify(authorization, JWT_SECRET, (err, decoded) => {
+    if (err) {
+      throw new CustomError({
+        message: 'Expired or invalid token',
+        status: StatusCodes.UNAUTHORIZED,
+      });
+    }
+    const { _id } = decoded;
+    return _id;
+  });
+};
+
+module.exports = { generateToken, verifyToken };
