@@ -8,6 +8,7 @@ const {
   getCategoriesRoute,
   createBlogPostRoute,
   getBlogPostsRoute,
+  getBlogPostByIdRoute,
 } = require('./routes');
 
 const app = express();
@@ -28,6 +29,7 @@ app.use('/categories',
   getCategoriesRoute);
 app.use('/post',
   createBlogPostRoute,
-  getBlogPostsRoute);
+  getBlogPostsRoute,
+  getBlogPostByIdRoute);
 
 app.listen(3000, () => console.log('ouvindo porta 3000!'));
