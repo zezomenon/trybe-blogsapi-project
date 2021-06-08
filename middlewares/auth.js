@@ -28,9 +28,14 @@ const verifyToken = (authorization) => {
         status: StatusCodes.UNAUTHORIZED,
       });
     }
-    const { _id } = decoded;
-    return _id;
+    const { email } = decoded;
+    return email;
   });
 };
 
-module.exports = { generateToken, verifyToken };
+const getInfoUser = (authorization) => {
+  const result = jwt.verify(authorization, JWT_SECRET);
+  return result;
+};
+
+module.exports = { generateToken, verifyToken, getInfoUser };

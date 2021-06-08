@@ -4,6 +4,7 @@ const getUsersController = require('./getUsersController');
 const getUserByIdController = require('./getUserByIdController');
 const createCategorieController = require('./createCategorieController');
 const getCategoriesController = require('./getCategoriesController');
+const createBlogPostController = require('./createBlogPostController');
 
 module.exports = {
   createUserController,
@@ -12,4 +13,5 @@ module.exports = {
   getUserByIdController,
   createCategorieController,
   getCategoriesController,
+  createBlogPostController,
 };
