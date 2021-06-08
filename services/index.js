@@ -5,6 +5,7 @@ const getUserByIdService = require('./getUserByIdService');
 const createCategorieService = require('./createCategorieService');
 const getCategoriesService = require('./getCategoriesService');
 const createBlogPostService = require('./createBlogPostService');
+const getBlogPostsService = require('./getBlogPostsService');
 
 module.exports = {
   createUserService,
@@ -14,4 +15,5 @@ module.exports = {
   createCategorieService,
   getCategoriesService,
   createBlogPostService,
+  getBlogPostsService,
 };
