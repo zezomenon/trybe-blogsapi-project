@@ -44,15 +44,17 @@ const updateBlogPostService = async (authorization, id, post) => {
   verifyToken(authorization);
   const { email } = getInfoUser(authorization);
   const user = await User.findOne({ where: { email } });
+  
   const blogPost = await BlogPost.findOne({ where: { id },
     include: [ 
       { model: User, as: 'user' },
       { model: Categorie, as: 'categories', through: { attributes: [] } },
     ],
   });
+
   checkUserPost(user.id, blogPost);
-  await BlogPost.update({ title, content }, { where: { id } });
   
+  await BlogPost.update({ title, content }, { where: { id } });
   return { title, content, userId: user.id, categories: blogPost.categories };
 };
 

@@ -8,6 +8,7 @@ const createBlogPostService = require('./createBlogPostService');
 const getBlogPostsService = require('./getBlogPostsService');
 const getBlogPostByIdService = require('./getBlogPostByIdService');
 const updateBlogPostService = require('./updateBlogPostService');
+const deleteBlogPostService = require('./deleteBlogPostService');
 
 module.exports = {
   createUserService,
@@ -20,4 +21,5 @@ module.exports = {
   getBlogPostsService,
   getBlogPostByIdService,
   updateBlogPostService,
+  deleteBlogPostService,
 };

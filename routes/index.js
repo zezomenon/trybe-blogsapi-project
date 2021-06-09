@@ -8,6 +8,7 @@ const createBlogPostRoute = require('./createBlogPostRoute');
 const getBlogPostsRoute = require('./getBlogPostsRoute');
 const getBlogPostByIdRoute = require('./getBlogPostByIdRoute');
 const updateBlogPostRoute = require('./updateBlogPostRoute');
+const deleteBlogPostRoute = require('./deleteBlogPostRoute');
 
 module.exports = {
   createUserRoute,
@@ -20,4 +21,5 @@ module.exports = {
   getBlogPostsRoute,
   getBlogPostByIdRoute,
   updateBlogPostRoute,
+  deleteBlogPostRoute,
 };
