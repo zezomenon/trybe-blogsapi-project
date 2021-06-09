@@ -27,9 +27,6 @@ const deleteBlogPostService = async (authorization, id) => {
   const user = await User.findOne({ where: { email } });
   
   const blogPost = await BlogPost.findOne({ where: { id } });
-  // console.log(blogPost.id);
-  // console.log(blogPost.userId);
-  // console.log(user.id);
 
   checkPostExists(blogPost);
   checkUserPost(user.id, blogPost);

@@ -11,6 +11,7 @@ const {
   getBlogPostByIdRoute,
   updateBlogPostRoute,
   deleteBlogPostRoute,
+  deleteUserRoute,
 } = require('./routes');
 
 const app = express();
@@ -24,11 +25,14 @@ app.get('/', (request, response) => {
 app.use('/user', 
   createUserRoute,
   getUsersRoute,
-  getUserByIdRoute);
+  getUserByIdRoute,
+  deleteUserRoute);
+
 app.use('/login', loginUserRoute);
 app.use('/categories', 
   createCategorieRoute,
   getCategoriesRoute);
+
 app.use('/post',
   createBlogPostRoute,
   getBlogPostsRoute,
