@@ -1,16 +1,6 @@
-const { StatusCodes } = require('http-status-codes');
-const { CustomError } = require('../helpers/error');
 const { verifyToken } = require('../middlewares/auth');
+const validations = require('../middlewares/validations');
 const { BlogPost, User, Categorie } = require('../models');
-
-const checkPostExists = (result) => {
-  if (result === null) {
-    throw new CustomError({
-      message: 'Post does not exist',
-      status: StatusCodes.NOT_FOUND,
-    });
-  }
-};
 
 const getBlogPostByIdService = async (authorization, id) => {
   verifyToken(authorization);
@@ -29,7 +19,7 @@ const getBlogPostByIdService = async (authorization, id) => {
       },
     ],
   });
-  checkPostExists(result);
+  validations.checkPostExists(result);
   return result;
 };
 
