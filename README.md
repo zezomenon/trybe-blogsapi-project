@@ -44,4 +44,4 @@ Primeiro, foi criada uma tabela para os usuários se cadastrarem na aplicação.
 
 - [Node.js](https://nodejs.org/en/)
 
-- [MySQL](https://www.mongodb.com/)
+- [MySQL](https://www.mysql.com/)
